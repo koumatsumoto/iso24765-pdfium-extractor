@@ -110,6 +110,25 @@ def remove_header_blocks(text: str) -> str:
     return '\n'.join(result)
 
 
+def delete_lines_before_3_1(text: str) -> str:
+    """Delete all lines before the line containing '3.1' and log the number of deleted lines."""
+    lines = text.split('\n')
+    found_index = -1
+    
+    for i, line in enumerate(lines):
+        if "3.1" in line:
+            found_index = i
+            break
+    
+    if found_index == -1:
+        print("\nNo line containing '3.1' found. No lines deleted.")
+        return text
+    
+    deleted_lines = found_index
+    print(f"\nDeleted {deleted_lines} lines before '3.1'")
+    
+    return '\n'.join(lines[found_index:])
+
 def extract_text_from_pdf(pdf_path: str | Path) -> str:
     """Extract text from PDF file using pypdfium2."""
     pdf = pdfium.PdfDocument(pdf_path)
@@ -131,6 +150,7 @@ def main():
     text = remove_header_blocks(text)
     # Remove footer blocks
     text = remove_footer_blocks(text)
+    text = delete_lines_before_3_1(text)
     
     output_path = Path(__file__).parent.parent / "data" / "output.txt"
     output_path.write_text(text, encoding='utf-8')
