@@ -7,10 +7,11 @@ def extract_text_from_pdf(pdf_path: str | Path) -> str:
     pdf = pdfium.PdfDocument(pdf_path)
     text_parts = []
 
-    for page_number in range(len(pdf)):
+    for page_number in range(1, len(pdf)):  # Start from 1 to skip the first page (cover)
         page = pdf.get_page(page_number)
         text_page = page.get_textpage()
-        text_parts.append(text_page.get_text_range())
+        text = text_page.get_text_range()
+        text_parts.append(text)
 
     return "\n".join(text_parts)
 
