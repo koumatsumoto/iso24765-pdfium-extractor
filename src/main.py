@@ -7,7 +7,7 @@ def extract_text_from_pdf(pdf_path: str | Path) -> str:
     pdf = pdfium.PdfDocument(pdf_path)
     text_parts = []
 
-    for page_number in range(6, len(pdf)):  # Skip first 6 pages (cover and table of contents)
+    for page_number in range(6, len(pdf) - 12):  # Skip first 6 pages (cover and TOC) and last 12 pages (annexes)
         page = pdf.get_page(page_number)
         text_page = page.get_textpage()
         text = text_page.get_text_range()
