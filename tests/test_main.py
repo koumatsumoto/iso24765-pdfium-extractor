@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from src.main import (
     remove_header_blocks, remove_footer_blocks, delete_lines_before_3_1,
-    extract_words_and_descriptions, save_as_json
+    extract_words_and_descriptions, save_as_json, delete_figure_lines
 )
 
 def test_remove_header_blocks():
@@ -82,31 +82,22 @@ def test_extract_words_and_descriptions_no_valid_words():
     result = extract_words_and_descriptions(sample_text)
     assert result == []
 
-def test_extract_words_and_descriptions_skip_figure_lines():
-    sample_text = (
-        "3.1\nabstraction\nFirst description line\nFigure 1: Some diagram\nSecond description line\n\n"
-        "3.2\nactivity\nAnother description\nFigure 2: Another diagram\n\n"
-        "3.3\nalgorithm\nSingle line description"
-    )
-    expected_result = [
-        {
-            'word_number': '3.1',
-            'word': 'abstraction',
-            'description': 'First description line\nSecond description line'
-        },
-        {
-            'word_number': '3.2',
-            'word': 'activity',
-            'description': 'Another description'
-        },
-        {
-            'word_number': '3.3',
-            'word': 'algorithm',
-            'description': 'Single line description'
-        }
-    ]
-    result = extract_words_and_descriptions(sample_text)
+def test_delete_figure_lines():
+    sample_text = "First line\nFigure 1: Some diagram\nSecond line\nFigure 2: Another diagram\nLast line"
+    expected_result = "First line\nSecond line\nLast line"
+    result = delete_figure_lines(sample_text)
     assert result == expected_result
+
+def test_delete_figure_lines_with_empty_lines():
+    sample_text = "First line\n\nFigure 1: Some diagram\n\nSecond line\n\nFigure 2: Another diagram\n\nLast line"
+    expected_result = "First line\n\n\nSecond line\n\n\nLast line"  # 空行が保持される
+    result = delete_figure_lines(sample_text)
+    assert result == expected_result
+
+def test_delete_figure_lines_no_figures():
+    sample_text = "First line\nSecond line\nLast line"
+    result = delete_figure_lines(sample_text)
+    assert result == sample_text  # テキストは変更されない
 
 def test_save_as_json(tmp_path):
     data = [

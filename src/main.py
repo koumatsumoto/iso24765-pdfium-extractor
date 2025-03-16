@@ -112,6 +112,23 @@ def remove_header_blocks(text: str) -> str:
     
     return '\n'.join(result)
 
+def delete_figure_lines(text: str) -> str:
+    """Delete all lines that start with 'Figure ' and log the number of deleted lines."""
+    lines = text.split('\n')
+    result = []
+    figure_lines_removed = 0
+    
+    for line in lines:
+        line = line.strip()
+        if line.startswith("Figure "):
+            figure_lines_removed += 1
+            continue
+        result.append(line)
+    
+    print(f"\nDeleted {figure_lines_removed} figure reference lines")
+    
+    return '\n'.join(result)
+
 def delete_lines_before_3_1(text: str) -> str:
     """Delete all lines before the line containing '3.1' and log the number of deleted lines."""
     lines = text.split('\n')
@@ -195,9 +212,7 @@ def extract_words_and_descriptions(text: str) -> List[Dict[str, str]]:
         else:
             # Add to current description
             if current_word_number and current_word:  # Only add if we have both number and word
-                # Skip lines that start with "Figure " as they reference PDF figures that are not relevant in extracted text
-                if not line.startswith("Figure "):
-                    current_description_lines.append(line)
+                current_description_lines.append(line)
             i += 1
     
     # Add last entry
@@ -229,6 +244,7 @@ def main():
     text = remove_header_blocks(text)
     text = remove_footer_blocks(text)
     text = delete_lines_before_3_1(text)
+    text = delete_figure_lines(text)
     
     # テキストファイルとして保存
     output_txt_path = Path(__file__).parent.parent / "data" / "output.txt"

@@ -395,7 +395,6 @@ Management Body of Knowledge (PMBOK® Guide) — Fifth Edition]
 3.73
 activity group
 1. set of related activities.
-Figure 1 — Activity group
 3.74
 activity identifier
 1. a short, unique numeric or text identification assigned to each schedule activity to differentiate that project
@@ -1937,7 +1936,6 @@ bathtub curve
 Note 1 to entry: The name is derived from the usual shape of the graph: a period of decreasing failures (the early-failure period),
 followed by a relatively steady period (the constant-failure period), followed by a period of increasing failures (the wearou
 failure period).
-Figure 2 — Bathtub curve
 3.355
 Bayes' rule
 1. statistical formula that relates the conditional probability P (A | B) to the inverse conditional probability P (B | A)
@@ -2148,7 +2146,6 @@ show the relationships of the blocks [ISO/IEC 2382:2015, Information technology 
 system, computer, or device in which the principal parts are represented by suitably annotated geometrical figures
 to show both the functions of the parts and their functional relationships
 cf. box diagram, bubble chart, flowchart, graph, input-process-output chart, structure cha
-Figure 3 — Block diagram
 3.393
 block-structured language
 1. design or programming language in which sequences of statements, called blocks, are defined, usually with begin
@@ -2260,7 +2257,6 @@ Nassi-Shneiderman char
 conditions, repetition, and case conditions
 cf. block diagram, bubble chart, flowchart, graph, input-process-output chart, program structure diagram
 structure chart
-Figure 4 —Box Diagram
 3.415
 box ICOM code
 1. ICOM code that maps a tunneled boundary arrow to an arrow attached to some ancestral box [IEEE 1320.1-1998
@@ -2335,7 +2331,6 @@ bubble chart
 1. data flow, data structure, or other diagram in which entities are depicted with circles (bubbles) and
 relationships are represented by links drawn between the circles
 cf. block diagram, box diagram, flowchart, graph, input-process-output chart, structure cha
-Figure 5 —Bubble chart
 3.428
 budget
 1. the approved estimate for the project or any work breakdown structure component or any schedule activity [A
@@ -2553,7 +2548,6 @@ tier chart
 1. diagram that identifies the modules in a system or computer program and shows which modules call one another
 cf. structure chart, control flow diagram, data flow diagram, data structure diagram, state diagram
 Note 1 to entry: The result is not necessarily the same as that shown in a structure chart.
-Figure 6 —Call graph
 3.464
 call list
 1. ordered list of arguments used in a call to a software module
@@ -2656,7 +2650,6 @@ performed for each value of the control expression, and returns control in all i
 following the overall construct 2. Computer Aided Software Engineering [ISO/IEC 14102:2008 Information
 Technology - Guideline for the evaluation and selection of CASE tools, 4]
 cf. go to, jump, if-then-else. multiple inclusive selective constru
-Figure 7 —Case construct
 3.484
 CASE needs
 1. organizational requirements which are met by CASE tool characteristics [ISO/IEC TR 14471:2007 Information
@@ -2701,7 +2694,6 @@ category
 subset of categorization space, which the stakeholders are interested in, specified using a combination of one or
 more equivalence classes [ISO/IEC TR 12182:2015 Systems and software engineering — Framework for
 categorization of IT systems and software, and guide for applying it, 3.9]
-Figure 8 — Category
 3.492
 category entity
 1. entity whose instances represent a subtype or subclassification of another entity (generic entity) [IEEE 1320.2-
@@ -5415,7 +5407,6 @@ data flow graph
 1. diagram that depicts data sources, data sinks, data storage, and processes performed on data as nodes, and
 logical flow of data as links between the nodes
 cf. control flow diagram, data structure diagram
-Figure 9 — Data flow diagram
 3.1008
 data format
 1. specified arrangement and encoding for data to be communicated or stored and retrieved 2. arrangement of data
@@ -5565,7 +5556,6 @@ Note 1 to entry: The data structures are usually documented in technical and log
 data structure diagram
 1. diagram that depicts a set of data elements, their attributes, and the logical relationships among them
 cf. data flow diagram, entity-relationship diagra
-Figure 10 — Data structure diagram
 3.1034
 data structure-centered design
 1. software design technique in which the architecture of a system is derived from analysis of the structure of the
@@ -6555,7 +6545,6 @@ directed graph
 digraph
 1. graph in which direction is implied in the internode connections
 cf. undirected graph
-Figure 11 — Directed graph
 3.1224
 directory
 1. list of data items and information about those data items
@@ -6754,7 +6743,6 @@ Guide to the Project Management Body of Knowledge (PMBOK® Guide) — Fifth Edit
 documentation tree
 1. diagram that depicts all of the documents for a given system and shows their relationships to one another
 cf. specification tree
-Figure 12 — Documentation tree
 3.1263
 DoDAF
 1. Department of Defense architecture framework [IEEE 15288.1:2014 IEEE Standard for Application of Systems
@@ -8713,7 +8701,6 @@ the sequential flow from one to another 4. the depiction in a diagram format of 
 outputs of one or more processes within a system [A Guide to the Project Management Body of Knowledge (PMBOK®
 Guide) — Fifth Edition]
 cf. block diagram, box diagram, bubble chart, graph, input-process-output chart, structure cha
-Figure 13 — Flowchart
 3.1622
 flowcharter
 1. software tool that accepts as input a design or code representation of a program and produces as output a
@@ -10007,7 +9994,6 @@ if-then-else
 condition is met and, optionally, if it is not, and returns control in both instances to the statement immediately
 following the overall construct
 cf. case, jump, go to, dyadic selective construct, monadic selective construct
-Figure 14 — If-then-else construct
 3.1874
 IFB
 1. invitation for bid [A Guide to the Project Management Body of Knowledge (PMBOK® Guide) — Fifth Edition]
@@ -10663,7 +10649,6 @@ input-process-output (IPO) chart
 center listing processing steps, a rectangle on the right listing outputs, and arrows connecting inputs to processing
 steps and processing steps to outputs
 cf. block diagram, box diagram, bubble chart, flowchart, graph, structure chart
-Figure 15 — Input-process-output chart
 3.2000
 inspection
 1. visual examination of a software product to detect and identify software anomalies, including errors and
@@ -13220,7 +13205,6 @@ cf. change request, request for change
 Note 1 to entry: The MR can be classified as a correction or enhancement and identified as corrective, preventive, adaptive, or
 perfective maintenance. Trouble/problem-reporting documents include incident and problem reports; configuration change
 control documents include software change requests (SCRs).
-Figure 16 — Modification request
 3.2501
 modified source statement
 1. source statement that has been changed from the original source
@@ -21030,7 +21014,6 @@ program structure chart
 larger or more general entities break down into smaller, more specific entities
 cf. call graph
 Note 1 to entry: The result is not necessarily the same as that shown in a call graph.
-Figure 17 — Structure chart
 3.4011
 structure clash
 1. in software design, a situation in which a module must deal with two or more data sets that have incompatible
@@ -23329,7 +23312,6 @@ UNTIL
 post-tested iteratio
 1. single-entry, single-exit loop, in which the loop control is executed after the loop bod
 cf. closed loop, WHILE, trailing decision
-Figure 18 — UNTIL construct
 3.4439
 unwind
 1. in programming, to state explicitly and in full all of the instructions involved in multiple executions of a loop
@@ -24218,7 +24200,6 @@ waterfall model
 requirements phase, design phase, implementation phase, test phase, and installation and checkout phase, are
 performed in that order, possibly with overlap but with little or no iteration
 cf. incremental development, rapid prototyping, spiral model
-Figure 19 — Waterfall model
 3.4585
 WBS
 1. work breakdown structure [ISO/IEC TR 29110-5-6-2:2014 Systems and software engineering — Lifecycle profiles
@@ -24254,7 +24235,6 @@ website
 1. collection of logically connected web pages managed as a single entity [ISO/IEC/IEEE 23026:2015 Systems and
 software engineering — Engineering and management of websites for systems, software, and services information,
 4.29]
-Figure 20 — Website
 3.4592
 website owner
 1. organization responsible for the site content and site design [ISO/IEC/IEEE 23026:2015 Systems and software
@@ -24281,7 +24261,6 @@ WHILE
 pretested iteration
 1. single-entry, single-exit loop in which the loop control is executed before the loop bo
 cf. closed loop, UNTIL, leading decision
-Figure 21 — WHILE construct
 3.4597
 whitespace
 1. nondisplaying formatting characters that are embedded within a block of free text [IEEE 1320.2-1998 (R2004)
