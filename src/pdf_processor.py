@@ -1,6 +1,5 @@
-import pypdfium2 as pdfium
+import pypdfium2 as pdfium # type: ignore
 from pathlib import Path
-from typing import List, Dict
 
 def is_integer(s: str) -> bool:
     """Check if string represents an integer."""

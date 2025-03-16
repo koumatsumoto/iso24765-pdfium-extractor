@@ -1,6 +1,4 @@
-import pytest
 import json
-from pathlib import Path
 from src.data_extractor import extract_words_and_descriptions, save_as_json
 
 def test_extract_words_and_descriptions():
