@@ -1,5 +1,6 @@
+import csv
 import json
-from src.data_extractor import extract_words_and_descriptions, save_as_json
+from src.data_extractor import extract_words_and_descriptions, save_as_json, save_as_csv
 
 def test_extract_words_and_descriptions():
     sample_text = (
@@ -52,3 +53,22 @@ def test_save_as_json(tmp_path):
     with open(output_path, 'r', encoding='utf-8') as f:
         saved_data = json.load(f)
     assert saved_data == data
+
+def test_save_as_csv(tmp_path):
+    data = [
+        {
+            'word_number': '3.1',
+            'word': 'test',
+            'description': 'Test description'
+        }
+    ]
+    output_path = tmp_path / "test_output.csv"
+    save_as_csv(data, output_path)
+    
+    # Check if file exists and content is correct
+    assert output_path.exists()
+    with open(output_path, 'r', encoding='utf-8', newline='') as f:
+        reader = csv.DictReader(f)
+        saved_data = list(reader)
+        assert len(saved_data) == 1
+        assert saved_data[0] == data[0]

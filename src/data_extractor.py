@@ -1,3 +1,4 @@
+import csv
 import json
 import re
 from pathlib import Path
@@ -96,3 +97,15 @@ def save_as_json(data: List[Dict[str, str]], output_path: Path) -> None:
     """
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+
+def save_as_csv(data: List[Dict[str, str]], output_path: Path) -> None:
+    """Save data as CSV file.
+    
+    Args:
+        data: List of dictionaries to save
+        output_path: Path to save the CSV file
+    """
+    with open(output_path, 'w', encoding='utf-8', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=['word_number', 'word', 'description'])
+        writer.writeheader()
+        writer.writerows(data)
