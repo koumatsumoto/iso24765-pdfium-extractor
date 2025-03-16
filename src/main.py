@@ -195,7 +195,9 @@ def extract_words_and_descriptions(text: str) -> List[Dict[str, str]]:
         else:
             # Add to current description
             if current_word_number and current_word:  # Only add if we have both number and word
-                current_description_lines.append(line)
+                # Skip lines that start with "Figure " as they reference PDF figures that are not relevant in extracted text
+                if not line.startswith("Figure "):
+                    current_description_lines.append(line)
             i += 1
     
     # Add last entry

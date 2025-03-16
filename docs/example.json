@@ -362,7 +362,7 @@
   {
     "word_number": "3.73",
     "word": "activity group",
-    "description": "1. set of related activities.\nFigure 1 — Activity group"
+    "description": "1. set of related activities."
   },
   {
     "word_number": "3.74",
@@ -1767,7 +1767,7 @@
   {
     "word_number": "3.354",
     "word": "bathtub curve",
-    "description": "1. graph of the number of failures in a system or component as a function of time\nNote 1 to entry: The name is derived from the usual shape of the graph: a period of decreasing failures (the early-failure period),\nfollowed by a relatively steady period (the constant-failure period), followed by a period of increasing failures (the wearou\nfailure period).\nFigure 2 — Bathtub curve"
+    "description": "1. graph of the number of failures in a system or component as a function of time\nNote 1 to entry: The name is derived from the usual shape of the graph: a period of decreasing failures (the early-failure period),\nfollowed by a relatively steady period (the constant-failure period), followed by a period of increasing failures (the wearou\nfailure period)."
   },
   {
     "word_number": "3.355",
@@ -1957,7 +1957,7 @@
   {
     "word_number": "3.392",
     "word": "block diagram",
-    "description": "configuration diagram\nsystem resources chart\n1. diagram of a system in which the principal parts or functions are represented by blocks connected by lines that\nshow the relationships of the blocks [ISO/IEC 2382:2015, Information technology — Vocabulary] 2. diagram of a\nsystem, computer, or device in which the principal parts are represented by suitably annotated geometrical figures\nto show both the functions of the parts and their functional relationships\ncf. box diagram, bubble chart, flowchart, graph, input-process-output chart, structure cha\nFigure 3 — Block diagram"
+    "description": "configuration diagram\nsystem resources chart\n1. diagram of a system in which the principal parts or functions are represented by blocks connected by lines that\nshow the relationships of the blocks [ISO/IEC 2382:2015, Information technology — Vocabulary] 2. diagram of a\nsystem, computer, or device in which the principal parts are represented by suitably annotated geometrical figures\nto show both the functions of the parts and their functional relationships\ncf. box diagram, bubble chart, flowchart, graph, input-process-output chart, structure cha"
   },
   {
     "word_number": "3.393",
@@ -2067,7 +2067,7 @@
   {
     "word_number": "3.414",
     "word": "box diagram",
-    "description": "Chapin chart\nNassi-Shneiderman char\n1. control flow diagram consisting of a rectangle that is subdivided to show sequential steps, if-then-els\nconditions, repetition, and case conditions\ncf. block diagram, bubble chart, flowchart, graph, input-process-output chart, program structure diagram\nstructure chart\nFigure 4 —Box Diagram"
+    "description": "Chapin chart\nNassi-Shneiderman char\n1. control flow diagram consisting of a rectangle that is subdivided to show sequential steps, if-then-els\nconditions, repetition, and case conditions\ncf. block diagram, bubble chart, flowchart, graph, input-process-output chart, program structure diagram\nstructure chart"
   },
   {
     "word_number": "3.415",
@@ -2132,7 +2132,7 @@
   {
     "word_number": "3.427",
     "word": "bubble chart",
-    "description": "1. data flow, data structure, or other diagram in which entities are depicted with circles (bubbles) and\nrelationships are represented by links drawn between the circles\ncf. block diagram, box diagram, flowchart, graph, input-process-output chart, structure cha\nFigure 5 —Bubble chart"
+    "description": "1. data flow, data structure, or other diagram in which entities are depicted with circles (bubbles) and\nrelationships are represented by links drawn between the circles\ncf. block diagram, box diagram, flowchart, graph, input-process-output chart, structure cha"
   },
   {
     "word_number": "3.428",
@@ -2312,7 +2312,7 @@
   {
     "word_number": "3.463",
     "word": "call graph",
-    "description": "call tree,\ntier chart\n1. diagram that identifies the modules in a system or computer program and shows which modules call one another\ncf. structure chart, control flow diagram, data flow diagram, data structure diagram, state diagram\nNote 1 to entry: The result is not necessarily the same as that shown in a structure chart.\nFigure 6 —Call graph"
+    "description": "call tree,\ntier chart\n1. diagram that identifies the modules in a system or computer program and shows which modules call one another\ncf. structure chart, control flow diagram, data flow diagram, data structure diagram, state diagram\nNote 1 to entry: The result is not necessarily the same as that shown in a structure chart."
   },
   {
     "word_number": "3.464",
@@ -2412,7 +2412,7 @@
   {
     "word_number": "3.483",
     "word": "case",
-    "description": "multiple exclusive selective construct\n1. single-entry, single-exit multiple-way branch that defines a control expression, specifies the processing to\nperformed for each value of the control expression, and returns control in all instances to the statement immediately\nfollowing the overall construct 2. Computer Aided Software Engineering [ISO/IEC 14102:2008 Information\nTechnology - Guideline for the evaluation and selection of CASE tools, 4]\ncf. go to, jump, if-then-else. multiple inclusive selective constru\nFigure 7 —Case construct"
+    "description": "multiple exclusive selective construct\n1. single-entry, single-exit multiple-way branch that defines a control expression, specifies the processing to\nperformed for each value of the control expression, and returns control in all instances to the statement immediately\nfollowing the overall construct 2. Computer Aided Software Engineering [ISO/IEC 14102:2008 Information\nTechnology - Guideline for the evaluation and selection of CASE tools, 4]\ncf. go to, jump, if-then-else. multiple inclusive selective constru"
   },
   {
     "word_number": "3.484",
@@ -2452,7 +2452,7 @@
   {
     "word_number": "3.491",
     "word": "category",
-    "description": "1. specifically defined division or grouping of software based upon one or more attributes or characteristics 2.\nsubset of categorization space, which the stakeholders are interested in, specified using a combination of one or\nmore equivalence classes [ISO/IEC TR 12182:2015 Systems and software engineering — Framework for\ncategorization of IT systems and software, and guide for applying it, 3.9]\nFigure 8 — Category"
+    "description": "1. specifically defined division or grouping of software based upon one or more attributes or characteristics 2.\nsubset of categorization space, which the stakeholders are interested in, specified using a combination of one or\nmore equivalence classes [ISO/IEC TR 12182:2015 Systems and software engineering — Framework for\ncategorization of IT systems and software, and guide for applying it, 3.9]"
   },
   {
     "word_number": "3.492",
@@ -5032,7 +5032,7 @@
   {
     "word_number": "3.1007",
     "word": "data flow diagram (DFD)",
-    "description": "data flowchart\ndata flow graph\n1. diagram that depicts data sources, data sinks, data storage, and processes performed on data as nodes, and\nlogical flow of data as links between the nodes\ncf. control flow diagram, data structure diagram\nFigure 9 — Data flow diagram"
+    "description": "data flowchart\ndata flow graph\n1. diagram that depicts data sources, data sinks, data storage, and processes performed on data as nodes, and\nlogical flow of data as links between the nodes\ncf. control flow diagram, data structure diagram"
   },
   {
     "word_number": "3.1008",
@@ -5162,7 +5162,7 @@
   {
     "word_number": "3.1033",
     "word": "data structure diagram",
-    "description": "1. diagram that depicts a set of data elements, their attributes, and the logical relationships among them\ncf. data flow diagram, entity-relationship diagra\nFigure 10 — Data structure diagram"
+    "description": "1. diagram that depicts a set of data elements, their attributes, and the logical relationships among them\ncf. data flow diagram, entity-relationship diagra"
   },
   {
     "word_number": "3.1034",
@@ -6112,7 +6112,7 @@
   {
     "word_number": "3.1223",
     "word": "directed graph",
-    "description": "digraph\n1. graph in which direction is implied in the internode connections\ncf. undirected graph\nFigure 11 — Directed graph"
+    "description": "digraph\n1. graph in which direction is implied in the internode connections\ncf. undirected graph"
   },
   {
     "word_number": "3.1224",
@@ -6307,7 +6307,7 @@
   {
     "word_number": "3.1262",
     "word": "documentation tree",
-    "description": "1. diagram that depicts all of the documents for a given system and shows their relationships to one another\ncf. specification tree\nFigure 12 — Documentation tree"
+    "description": "1. diagram that depicts all of the documents for a given system and shows their relationships to one another\ncf. specification tree"
   },
   {
     "word_number": "3.1263",
@@ -8102,7 +8102,7 @@
   {
     "word_number": "3.1621",
     "word": "flowchart",
-    "description": "flow diagram\n1. graphical representation of a process or the step-by-step solution of a problem, using suitably annotate\ngeometric figures connected by flowlines for the purpose of designing or documenting a process or program\n[ISO/IEC 2382:2015, Information technology — Vocabulary] 2. graphical representation of the definition, analysis,\nor method of solution of a problem in which symbols are used to represent operations, data, flow, equipment, etc.\n[ISO 5807:1985 Information processing — Documentation symbols and conventions for data, program and system\nflowcharts, program network charts and system resources charts, 3.3] 3. control flow diagram in which suitably\nannotated geometrical figures are used to represent operations, data, or equipment, and arrows are used to indicate\nthe sequential flow from one to another 4. the depiction in a diagram format of the inputs, process actions, and\noutputs of one or more processes within a system [A Guide to the Project Management Body of Knowledge (PMBOK®\nGuide) — Fifth Edition]\ncf. block diagram, box diagram, bubble chart, graph, input-process-output chart, structure cha\nFigure 13 — Flowchart"
+    "description": "flow diagram\n1. graphical representation of a process or the step-by-step solution of a problem, using suitably annotate\ngeometric figures connected by flowlines for the purpose of designing or documenting a process or program\n[ISO/IEC 2382:2015, Information technology — Vocabulary] 2. graphical representation of the definition, analysis,\nor method of solution of a problem in which symbols are used to represent operations, data, flow, equipment, etc.\n[ISO 5807:1985 Information processing — Documentation symbols and conventions for data, program and system\nflowcharts, program network charts and system resources charts, 3.3] 3. control flow diagram in which suitably\nannotated geometrical figures are used to represent operations, data, or equipment, and arrows are used to indicate\nthe sequential flow from one to another 4. the depiction in a diagram format of the inputs, process actions, and\noutputs of one or more processes within a system [A Guide to the Project Management Body of Knowledge (PMBOK®\nGuide) — Fifth Edition]\ncf. block diagram, box diagram, bubble chart, graph, input-process-output chart, structure cha"
   },
   {
     "word_number": "3.1622",
@@ -9362,7 +9362,7 @@
   {
     "word_number": "3.1873",
     "word": "if-then-else",
-    "description": "1. single-entry, single-exit two-way branch that defines a condition, specifies the processing to be performed if t\ncondition is met and, optionally, if it is not, and returns control in both instances to the statement immediately\nfollowing the overall construct\ncf. case, jump, go to, dyadic selective construct, monadic selective construct\nFigure 14 — If-then-else construct"
+    "description": "1. single-entry, single-exit two-way branch that defines a condition, specifies the processing to be performed if t\ncondition is met and, optionally, if it is not, and returns control in both instances to the statement immediately\nfollowing the overall construct\ncf. case, jump, go to, dyadic selective construct, monadic selective construct"
   },
   {
     "word_number": "3.1874",
@@ -9992,7 +9992,7 @@
   {
     "word_number": "3.1999",
     "word": "input-process-output (IPO) chart",
-    "description": "1. diagram of a software system or module, consisting of a rectangle on the left listing inputs, a rectangle in the\ncenter listing processing steps, a rectangle on the right listing outputs, and arrows connecting inputs to processing\nsteps and processing steps to outputs\ncf. block diagram, box diagram, bubble chart, flowchart, graph, structure chart\nFigure 15 — Input-process-output chart"
+    "description": "1. diagram of a software system or module, consisting of a rectangle on the left listing inputs, a rectangle in the\ncenter listing processing steps, a rectangle on the right listing outputs, and arrows connecting inputs to processing\nsteps and processing steps to outputs\ncf. block diagram, box diagram, bubble chart, flowchart, graph, structure chart"
   },
   {
     "word_number": "3.2000",
@@ -12497,7 +12497,7 @@
   {
     "word_number": "3.2500",
     "word": "modification request (MR)",
-    "description": "1. proposed changes to a product that is being maintained [IEEE 14764-2006 Software Engineering - Software Life\nCycle Processes - Maintenance, 3.6] 2. forms associated with the various trouble/problem-reporting documents and\nthe configuration change control documents\ncf. change request, request for change\nNote 1 to entry: The MR can be classified as a correction or enhancement and identified as corrective, preventive, adaptive, or\nperfective maintenance. Trouble/problem-reporting documents include incident and problem reports; configuration change\ncontrol documents include software change requests (SCRs).\nFigure 16 — Modification request"
+    "description": "1. proposed changes to a product that is being maintained [IEEE 14764-2006 Software Engineering - Software Life\nCycle Processes - Maintenance, 3.6] 2. forms associated with the various trouble/problem-reporting documents and\nthe configuration change control documents\ncf. change request, request for change\nNote 1 to entry: The MR can be classified as a correction or enhancement and identified as corrective, preventive, adaptive, or\nperfective maintenance. Trouble/problem-reporting documents include incident and problem reports; configuration change\ncontrol documents include software change requests (SCRs)."
   },
   {
     "word_number": "3.2501",
@@ -20047,7 +20047,7 @@
   {
     "word_number": "3.4010",
     "word": "structure chart",
-    "description": "hierarchy chart\nprogram structure chart\n1. diagram that identifies modules, activities, or other entities in a system or computer program and shows how\nlarger or more general entities break down into smaller, more specific entities\ncf. call graph\nNote 1 to entry: The result is not necessarily the same as that shown in a call graph.\nFigure 17 — Structure chart"
+    "description": "hierarchy chart\nprogram structure chart\n1. diagram that identifies modules, activities, or other entities in a system or computer program and shows how\nlarger or more general entities break down into smaller, more specific entities\ncf. call graph\nNote 1 to entry: The result is not necessarily the same as that shown in a call graph."
   },
   {
     "word_number": "3.4011",
@@ -22187,7 +22187,7 @@
   {
     "word_number": "3.4438",
     "word": "UNTIL",
-    "description": "post-tested iteratio\n1. single-entry, single-exit loop, in which the loop control is executed after the loop bod\ncf. closed loop, WHILE, trailing decision\nFigure 18 — UNTIL construct"
+    "description": "post-tested iteratio\n1. single-entry, single-exit loop, in which the loop control is executed after the loop bod\ncf. closed loop, WHILE, trailing decision"
   },
   {
     "word_number": "3.4439",
@@ -22917,7 +22917,7 @@
   {
     "word_number": "3.4584",
     "word": "waterfall model",
-    "description": "1. model of the software development process in which the constituent activities, typically a concept phase,\nrequirements phase, design phase, implementation phase, test phase, and installation and checkout phase, are\nperformed in that order, possibly with overlap but with little or no iteration\ncf. incremental development, rapid prototyping, spiral model\nFigure 19 — Waterfall model"
+    "description": "1. model of the software development process in which the constituent activities, typically a concept phase,\nrequirements phase, design phase, implementation phase, test phase, and installation and checkout phase, are\nperformed in that order, possibly with overlap but with little or no iteration\ncf. incremental development, rapid prototyping, spiral model"
   },
   {
     "word_number": "3.4585",
@@ -22952,7 +22952,7 @@
   {
     "word_number": "3.4591",
     "word": "website",
-    "description": "1. collection of logically connected web pages managed as a single entity [ISO/IEC/IEEE 23026:2015 Systems and\nsoftware engineering — Engineering and management of websites for systems, software, and services information,\n4.29]\nFigure 20 — Website"
+    "description": "1. collection of logically connected web pages managed as a single entity [ISO/IEC/IEEE 23026:2015 Systems and\nsoftware engineering — Engineering and management of websites for systems, software, and services information,\n4.29]"
   },
   {
     "word_number": "3.4592",
@@ -22977,7 +22977,7 @@
   {
     "word_number": "3.4596",
     "word": "WHILE",
-    "description": "pretested iteration\n1. single-entry, single-exit loop in which the loop control is executed before the loop bo\ncf. closed loop, UNTIL, leading decision\nFigure 21 — WHILE construct"
+    "description": "pretested iteration\n1. single-entry, single-exit loop in which the loop control is executed before the loop bo\ncf. closed loop, UNTIL, leading decision"
   },
   {
     "word_number": "3.4597",

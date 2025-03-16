@@ -82,6 +82,32 @@ def test_extract_words_and_descriptions_no_valid_words():
     result = extract_words_and_descriptions(sample_text)
     assert result == []
 
+def test_extract_words_and_descriptions_skip_figure_lines():
+    sample_text = (
+        "3.1\nabstraction\nFirst description line\nFigure 1: Some diagram\nSecond description line\n\n"
+        "3.2\nactivity\nAnother description\nFigure 2: Another diagram\n\n"
+        "3.3\nalgorithm\nSingle line description"
+    )
+    expected_result = [
+        {
+            'word_number': '3.1',
+            'word': 'abstraction',
+            'description': 'First description line\nSecond description line'
+        },
+        {
+            'word_number': '3.2',
+            'word': 'activity',
+            'description': 'Another description'
+        },
+        {
+            'word_number': '3.3',
+            'word': 'algorithm',
+            'description': 'Single line description'
+        }
+    ]
+    result = extract_words_and_descriptions(sample_text)
+    assert result == expected_result
+
 def test_save_as_json(tmp_path):
     data = [
         {
