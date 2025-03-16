@@ -1,5 +1,10 @@
 import pytest
-from src.main import remove_header_blocks, remove_footer_blocks, delete_lines_before_3_1
+import json
+from pathlib import Path
+from src.main import (
+    remove_header_blocks, remove_footer_blocks, delete_lines_before_3_1,
+    extract_words_and_descriptions, save_as_json
+)
 
 def test_remove_header_blocks():
     sample_text = "1\n© ISO/IEC 2017 – All rights reserved\n    Some content line\n2\n© IEEE 2017 – All rights reserved\n    Another content line\n3\n    More content"
@@ -41,3 +46,55 @@ def test_remove_footer_blocks_with_empty_lines():
     expected_result = "Some content line\n\n\nAnother content line\n\n\nContent continues\n\n\nFinal content\n"  # 空行が保持される
     result = remove_footer_blocks(sample_text)
     assert result == expected_result
+
+def test_extract_words_and_descriptions():
+    sample_text = (
+        "3.1\nabstraction\nFirst description line\nSecond description line\n\n"
+        "3.2\nactivity\nAnother description\n\n"
+        "3.3\nalgorithm\nSingle line description"
+    )
+    expected_result = [
+        {
+            'word_number': '3.1',
+            'word': 'abstraction',
+            'description': 'First description line\nSecond description line'
+        },
+        {
+            'word_number': '3.2',
+            'word': 'activity',
+            'description': 'Another description'
+        },
+        {
+            'word_number': '3.3',
+            'word': 'algorithm',
+            'description': 'Single line description'
+        }
+    ]
+    result = extract_words_and_descriptions(sample_text)
+    assert result == expected_result
+
+def test_extract_words_and_descriptions_empty_text():
+    result = extract_words_and_descriptions("")
+    assert result == []
+
+def test_extract_words_and_descriptions_no_valid_words():
+    sample_text = "Some text\nwithout any\nvalid word numbers"
+    result = extract_words_and_descriptions(sample_text)
+    assert result == []
+
+def test_save_as_json(tmp_path):
+    data = [
+        {
+            'word_number': '3.1',
+            'word': 'test',
+            'description': 'Test description'
+        }
+    ]
+    output_path = tmp_path / "test_output.json"
+    save_as_json(data, output_path)
+    
+    # Check if file exists and content is correct
+    assert output_path.exists()
+    with open(output_path, 'r', encoding='utf-8') as f:
+        saved_data = json.load(f)
+    assert saved_data == data

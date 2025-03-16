@@ -1,5 +1,8 @@
 import pypdfium2 as pdfium
+import json
+import re
 from pathlib import Path
+from typing import List, Dict
 
 def is_integer(s: str) -> bool:
     """Check if string represents an integer."""
@@ -109,7 +112,6 @@ def remove_header_blocks(text: str) -> str:
     
     return '\n'.join(result)
 
-
 def delete_lines_before_3_1(text: str) -> str:
     """Delete all lines before the line containing '3.1' and log the number of deleted lines."""
     lines = text.split('\n')
@@ -142,19 +144,98 @@ def extract_text_from_pdf(pdf_path: str | Path) -> str:
 
     return "\n".join(text_parts)
 
+def extract_words_and_descriptions(text: str) -> List[Dict[str, str]]:
+    """Extract words and their descriptions from the text.
+    
+    The text format should be:
+    3.1
+    word_name
+    description line(s)
+    3.2
+    word_name
+    description line(s)
+    ...
+    
+    Returns:
+        List of dictionaries containing 'word_number', 'word', and 'description' keys.
+    """
+    result = []
+    lines = text.split('\n')
+    current_word_number = None
+    current_word = None
+    current_description_lines = []
+    
+    word_number_pattern = re.compile(r'^3\.\d+$')
+    i = 0
+    
+    while i < len(lines):
+        line = lines[i].strip()
+        if not line:  # Skip empty lines
+            i += 1
+            continue
+            
+        if word_number_pattern.match(line):
+            # Save previous entry if exists
+            if current_word_number and current_word and current_description_lines:
+                result.append({
+                    'word_number': current_word_number,
+                    'word': current_word,
+                    'description': '\n'.join(current_description_lines)
+                })
+                
+            # Start new entry
+            current_word_number = line
+            current_description_lines = []
+            
+            # Get word from next line
+            i += 1
+            if i < len(lines):
+                current_word = lines[i].strip()
+            i += 1
+        else:
+            # Add to current description
+            if current_word_number and current_word:  # Only add if we have both number and word
+                current_description_lines.append(line)
+            i += 1
+    
+    # Add last entry
+    if current_word_number and current_word and current_description_lines:
+        result.append({
+            'word_number': current_word_number,
+            'word': current_word,
+            'description': '\n'.join(current_description_lines)
+        })
+    
+    print(f"\nExtracted {len(result)} words")
+    return result
+
+def save_as_json(data: List[Dict[str, str]], output_path: Path) -> None:
+    """Save data as JSON file.
+    
+    Args:
+        data: List of dictionaries to save
+        output_path: Path to save the JSON file
+    """
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
 def main():
     """Main function to extract text from ISO 24765 PDF."""
+    # PDF からテキスト抽出
     pdf_path = Path(__file__).parent.parent / "data" / "input.pdf"
     text = extract_text_from_pdf(pdf_path)
     text = remove_header_blocks(text)
-    # Remove footer blocks
     text = remove_footer_blocks(text)
     text = delete_lines_before_3_1(text)
     
-    output_path = Path(__file__).parent.parent / "data" / "output.txt"
-    output_path.write_text(text, encoding='utf-8')
-
+    # テキストファイルとして保存
+    output_txt_path = Path(__file__).parent.parent / "data" / "output.txt"
+    output_txt_path.write_text(text, encoding='utf-8')
+    
+    # 単語と説明を抽出して JSON として保存
+    words_and_descriptions = extract_words_and_descriptions(text)
+    output_json_path = Path(__file__).parent.parent / "data" / "output.json"
+    save_as_json(words_and_descriptions, output_json_path)
 
 if __name__ == "__main__":
     main()
