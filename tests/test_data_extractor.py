@@ -13,7 +13,7 @@ def test_extract_words_and_descriptions():
         {
             'word_number': '3.1',
             'word': 'abstraction',
-            'description': 'First description line\nSecond description line'
+            'description': 'First description line Second description line'
         },
         {
             'word_number': '3.2',

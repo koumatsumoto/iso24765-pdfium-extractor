@@ -3,6 +3,25 @@ import re
 from pathlib import Path
 from typing import List, Dict
 
+def _process_description_lines(description_lines: List[str]) -> str:
+    """Process description lines according to joining rules.
+    
+    Args:
+        description_lines: List of description lines to process
+        
+    Returns:
+        Processed description string with appropriate line joining
+    """
+    processed_description = ""
+    for line in description_lines:
+        if any(line.startswith(prefix) for prefix in ["cf. ", "EXAMPLE: ", "Note 1 to entry: "]):
+            # Add with newline for special prefixes
+            processed_description += f"\n{line}" if processed_description else line
+        else:
+            # Add with space for normal lines
+            processed_description += f" {line}" if processed_description else line
+    return processed_description
+
 def extract_words_and_descriptions(text: str) -> List[Dict[str, str]]:
     """Extract words and their descriptions from the text.
     
@@ -39,7 +58,7 @@ def extract_words_and_descriptions(text: str) -> List[Dict[str, str]]:
                 result.append({
                     'word_number': current_word_number,
                     'word': current_word,
-                    'description': '\n'.join(current_description_lines)
+                    'description': _process_description_lines(current_description_lines)
                 })
                 
             # Start new entry
@@ -62,7 +81,7 @@ def extract_words_and_descriptions(text: str) -> List[Dict[str, str]]:
         result.append({
             'word_number': current_word_number,
             'word': current_word,
-            'description': '\n'.join(current_description_lines)
+            'description': _process_description_lines(current_description_lines)
         })
     
     print(f"\nExtracted {len(result)} words")
